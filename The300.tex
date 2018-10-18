@@ -4,12 +4,15 @@
 \usecolortheme{seahorse}
 % \usepackage[table]{xcolor}
 \usepackage{multimedia}
-\usepackage{media9}
+% \usepackage{media9}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{lmodern}
 % \usepackage[usenames, dvipsnames]{color}
-
+\hypersetup{
+  colorlinks=True,
+  urlcolor=blue,
+}
 \usepackage{arydshln}
 \usepackage{url}
 \usepackage[absolute,overlay]{textpos}
@@ -38,13 +41,13 @@
 \title[]{The Three Hundred}
 \subtitle{A large galaxy cluster catalogue for cosmological and astrophysical applications.}
 \author[Email: weiguang.cui@uam.es]{{\Large \bf Weiguang Cui},\inst{*} \footnote{\url{https://weiguangcui.github.io}} \\
-  In collaboration with the core team ({\it Alexander Knebe, Gustavo Yepes} and etc.) of the nIFTy and the Three hundred projects and the participants of the CCC workshop.}
+  In collaboration with the core team ({\it Alexander Knebe, Gustavo Yepes} and etc.) of the nIFTy and the Three hundred projects.}
 \institute[]{
   \inst{*}
   Departamento de F\'isica Te\'{o}rica, \\
   Universidad Aut\'{o}noma de Madrid, 28049 Madrid, Spain
 }
-\date[]{Simulated skies for new-generation spectroscopic surveys workshop at ESA, Madrid, April 24, 2018}
+\date[]{Nanjing, 19, Oct. 2018 \newline Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.2898C}{}{}{Cui et al. 2018, MNRAS, 480, 2898}, \hyperref{http://adsabs.harvard.edu/abs/2018arXiv180905244W}{}{}{Wang et al. 2018}, Mostoghiu et al. 2018, Arthur et al. to be submitted and Li et al. in prep.}
 \logo{\includegraphics[height=1cm]{logo_uam.jpg}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -131,7 +134,7 @@
       {\scriptsize E.g. Baryon effects on density profile. \\ Ref: Cui et al. 2016}
     \end{textblock}
     }
-  \only<4>{
+  \only<4->{
     \begin{center}
       {\Large \bf What's next?}
     \end{center}
@@ -142,9 +145,12 @@
     \end{itemize}
 
   ~
-
-  \alert{\Large A large cluster sample!}
   }
+
+ \only<5>{
+  \begin{center}
+    \alert{\Large A large cluster sample!}
+  \end{center}}
   % \begin{enumerate}
   %   \item \alert{Code} My own SSP code -- pymgal (inherited from EzGal)
   %   \item \alert{Location} \path{~/TheThreeHundred/maps/CCD/<simulation code name>/NewMDCLUSTER_XXXX/}
@@ -248,19 +254,23 @@
 \begin{frame}
   \begin{center}
     {\Huge The results} \\
-
     \bigskip
-
-    ~~\\
-  The paper will be submitted very soon. \\
-  \bigskip
-  The results are \alert{preliminary}.
   \end{center}
+  
+  The results are mainly coming from
+  \begin{itemize}
+      \item \hyperref{intropaper}{}{}{the introduction paper (Cui et al. 2018)} is mainly about some general properites and scaling relations.
+      \item \hyperref{Wang}{}{}{the environment paper (Wang et al. 2018)}  mainly talks about the differences between cluster and other environments.
+      \item \hyperref{Mostoghiu}{}{}{the density profile paper (Mostoghiu et al. 2018)} studies the self-similarity of the density profiles in galaxy clusters.
+      \item \hyperref{Arthur}{}{}{The phase-space paper (Arthur et al. to be sumbitted)} investigates the gas phase-space in and around galaxy clusters.
+      \item \hyperref{Li}{}{}{The physical density paper (Li et al. in final prep.)} try to compare and understand the observable profiles in galaxy clusters.
+  \end{itemize}
+   
+
 \end{frame}
 
-\subsection{General Properties}
-\begin{frame}
-  \frametitle{General Properties: Baryon effects on halo mass}
+\subsection{General Properties} \label{intropaper}
+\begin{frame}{General Properties: Baryon effects on halo mass}
   \only<1>{
   \begin{figure}
     \includegraphics[width=0.7\textwidth]{Halo-mass-diff-cui2014}
@@ -270,8 +280,8 @@
   \only<2>{
   \begin{figure}
     \includegraphics[width=\textwidth]{HMD.pdf}
-    \vspace{-0.8cm}
-    \caption{halo mass difference respected to the DM run. Cui et al. in prep.}
+    \vspace{-0.6cm}
+    \caption{halo mass difference respected to the DM run. Cui et al. 2018}
   \end{figure}}
 \end{frame}
 
@@ -282,7 +292,7 @@
     \begin{figure}
       \includegraphics[width=0.9\textwidth]{ds-relations}
       \vspace{-0.4cm}
-      \caption{The relations between the three parameters. Cui et al. in prep.}
+      \caption{The relations between the three parameters. Cui et al. 2018}
     \end{figure}}
   \only<2>{
     \vspace{-0.8cm}
@@ -297,12 +307,11 @@
             $M_{200c}$ & $\eta$, $\Delta_r$ \& $f_s$ & $\Delta_r$ \& $f_s$ & $f_s$ \\
             $10^{14} \hMsun$& MUSIC/X & MUSIC/X & MUSIC/X\\
             \hline
-            $0.10 - 0.50$		& 0.44 / 0.36 & 0.56 / 0.48 & 0.70 / 0.65\\
-            $0.50 - 1.00$		& 0.36 / 0.34 & 0.45 / 0.46 & 0.56 / 0.57\\
+            $0.10 - 0.50$	& 0.44 / 0.36 & 0.56 / 0.48 & 0.70 / 0.65\\
+            $0.50 - 1.00$	& 0.36 / 0.34 & 0.45 / 0.46 & 0.56 / 0.57\\
             $1.00 - 6.41$ 	& 0.27 / 0.29 & 0.30 / 0.35 & 0.43 / 0.48\\ \hdashline
-            $6.41 - 10$   	& \alert{0.18 / 0.21} & 0.20 / 0.24 & 0.21 / 0.26\\
-            $> 10 $ 		    & 0.06 / 0.08 & 0.07 / 0.13 & 0.07 / 0.14\\
-            % \hline
+            $>6.42$   	& \alert{0.15 / 0.17} & 0.16 / 0.21 & 0.17 / 0.23\\
+            \hline
           \end{tabular}
         \end{table}
       \end{column}
@@ -325,14 +334,29 @@
   }
 \end{frame}
 
+\begin{frame}{General properties: the concentration}
+  \begin{figure}
+    \includegraphics<1>[width=\linewidth]{C-M-relations}
+    \vspace{-0.6cm}
+    \caption{The concentration -- mass relation. Cui et al. 2018}
+  \end{figure}
+\end{frame}
+
 \begin{frame}
   \frametitle{General Properties: the baryon fractions}
   \begin{figure}
     \includegraphics<1>[width=\linewidth]{Baryonic-fractions-hydro-full}
-    \vspace{-0.8cm}
-    \caption{The baryon fractions. Cui et al. in prep.}
-    % \includegraphics<2>[width=\linewidth]{Baryonic-fractions-semi-full}
-    % \caption{The baryon fractions. Cui et al. in prep.}
+    \vspace{-0.6cm}
+    \caption{The baryon fractions. Cui et al. 2018}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{General Properties: the halo - central galaxy mass relation}
+  \begin{figure}
+    \includegraphics<1>[width=0.7\linewidth]{HS-relation-full}
+    \vspace{-0.6cm}
+    \caption{The halo mass - central galaxy mass relation. Cui et al. 2018}
   \end{figure}
 \end{frame}
 
@@ -345,47 +369,87 @@
     \includegraphics[width=0.32\linewidth]{Optical-relation2}
     \includegraphics[width=0.32\linewidth]{Optical-relation3}
     \vspace{-0.3cm}
-    \caption{The optical relations. Cui et al. in prep.}
+    \caption{The optical relations. Cui et al. 2018}
   \end{figure}
 \end{frame}
 \begin{frame}
   \frametitle{Optical relations: the satellite stellar mass function}
-  The complete sample is used here.
+%   The complete sample is used here.
   \begin{figure}
     \includegraphics<1>[width=0.7\linewidth]{Ssmf}
     \vspace{-0.6cm}
-    \caption{The satellite stellar mass function. Cui et al. in prep.}
+    \caption{The satellite stellar mass function. Cui et al. 2018}
   \end{figure}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Gas scaling relations}
+\begin{frame}{Gas scaling relations}
+\only<1>{
   \begin{figure}
     \includegraphics[width=0.48\linewidth]{T-M-relations}
-    \includegraphics[width=0.48\linewidth]{YM_relation}
+    \includegraphics[width=0.48\linewidth]{YM_relation-full}
     \vspace{-0.4cm}
-    \caption{The gas relations. Cui et al. in prep.}
+    \caption{The gas scaling relations. Cui et al. 2018}
   \end{figure}
+  \begin{center}
+    Fitting function -- $Y_{500} = 10^A (\frac{M_{500}}{6\times10^{14} M_{\odot}})^B$
+\end{center}}
+% \only<2>{
+% \begin{table}[]
+%     \centering
+%     \begin{tabular}{c|c|c}
+%     \hline
+%         T-M & A & B \\
+%         \hline
+%         GadgetX & 0.663 $\pm$ 0.012 & 0.574 $\pm$ 0.008 \\
+%         GadgetMUSIC & 0.688 $\pm$ 0.011 & 0.627 $\pm$ 0.007 \\
+%         \hline \hline
+%         Y-M & A & B \\
+%         \hline
+%         GadgetX & -4.18 $\pm$ 0.007 & 1.63 $\pm$ 0.29\\
+%         GadgetMUSIC & -4.26 $\pm$ 0.007 & 1.62 $\pm$ 0.31 \\
+%         \hline
+%     \end{tabular}
+%     \caption{Caption}
+%     \label{tab:my_label}
+% \end{table}}
 \end{frame}
 
-\section{conclusion and future prospects}
-\begin{frame}
-  \frametitle{Conclusion}
-  {\Large
-  \begin{itemize}
-    \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
-    \item $\sim 20 \%$ of the complete sample is relaxed clusters, 26\% (9\%) of the sample is CC for GadgetX (MUSIC).
-    \item The baryon fractions are in agreement with the observations at massive halo masses for GadgetX.
-    \item The optical relations are in agreement with the observations but the galaxies from more models seem to be a little blue.
-    \item The gas relations are in agreement with observations.
-  \end{itemize}}
+\subsection{The environment effects}
+\begin{frame}{The environment effects}\label{Wang}
+    
 \end{frame}
+
+\subsection{The density profiles}
+\begin{frame}{The cluster density profiles}\label{Mostoghiu}
+    
+\end{frame}
+
+\subsection{The gas phase-space distribution}
+\begin{frame}{The gas phase-sapce distribution}\label{Arthur}
+    
+\end{frame}
+\subsection{The observable profiles}
+\begin{frame}{The observable profiles}\label{Li}
+    
+\end{frame}
+\section{future prospects}
+% \begin{frame}
+%   \frametitle{Conclusion}
+%   {\Large
+%   \begin{itemize}
+%     \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
+%     \item $\sim 20 \%$ of the complete sample is relaxed clusters, 26\% (9\%) of the sample is CC for GadgetX (MUSIC).
+%     \item The baryon fractions are in agreement with the observations at massive halo masses for GadgetX.
+%     \item The optical relations are in agreement with the observations but the galaxies from more models seem to be a little blue.
+%     \item The gas relations are in agreement with observations.
+%   \end{itemize}}
+% \end{frame}
 
 \begin{frame}
   \frametitle{Future works}
   \begin{itemize}
-    \item The density profiles, Mostoghiu et al. in prep.
-    \item The environment effects, Wang et al. in prep.
+    % \item The density profiles, Mostoghiu et al. in prep.
+    % \item The environment effects, Wang et al. in prep.
     % \item Comparisons between different methods for estimating cluster dynamical states.
     \item The mock images in optical, X-ray and SZ (lower images). \alert{And more...}
       \begin{figure}
