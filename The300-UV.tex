@@ -9,6 +9,10 @@
 \usepackage{amsmath}
 \usepackage{lmodern}
 % \usepackage[usenames, dvipsnames]{color}
+\hypersetup{
+  colorlinks=True,
+  urlcolor=blue,
+}
 
 \usepackage{arydshln}
 \usepackage{url}
@@ -39,13 +43,14 @@
 \title[]{The Three Hundred}
 \subtitle{A large galaxy cluster catalogue for cosmological and astrophysical applications.}
 \author[Email: weiguang.cui@uam.es]{{\Large \bf Weiguang Cui},\inst{*} \footnote{\url{https://weiguangcui.github.io}} \\
-  In collaboration with Alexander Knebe, Gustavo Yepes, Frazer Pearce, Chris Power, Romeel Dave, Robert Mostoghiu, Yang Wang, etc.}
+  In collaboration with the core team (Alexander Knebe, Frazer Pearce and  etc.) of the 300 project}
 \institute[]{
   \inst{*}
   Departamento de F\'isica Te\'{o}rica, \\
   Universidad Aut\'{o}noma de Madrid, 28049 Madrid, Spain
 }
-\date[]{University of Valencia, 5 July, 2018 \\ Results are from Cui et al. 2018 (submitted), Mostoghiu et al. in final prep. and Wang et al. 2018 in final prep.}
+\date[]{Purple mountain Observatory, Nanjing, 19, Oct. 2018 \\
+Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.2898C}{}{}{Cui et al. 2018, MNRAS, 480, 2898}, \hyperref{http://adsabs.harvard.edu/abs/2018arXiv180905244W}{}{}{Wang et al. 2018}, Mostoghiu et al. 2018, Arthur et al. to be submitted and Li et al. in prep.}
 \logo{\includegraphics[height=1cm]{logo_uam.jpg}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -178,7 +183,7 @@
       {\scriptsize E.g. Baryon effects on density profile. \\ Ref: Cui et al. 2016}
     \end{textblock}
     }
-  \only<4>{
+  \only<4->{
     \begin{center}
       {\Large \bf What's next?}
     \end{center}
@@ -188,10 +193,11 @@
       \item Comparisons between models and observations to constrain the models.
     \end{itemize}
 
-  ~
-
-  \alert{\Large A large cluster sample!}
-  }
+  ~}
+  \only<5>{
+  \begin{center}
+      \alert{\Large A large cluster sample!}
+  \end{center} }
   % \begin{enumerate}
   %   \item \alert{Code} My own SSP code -- pymgal (inherited from EzGal)
   %   \item \alert{Location} \path{~/TheThreeHundred/maps/CCD/<simulation code name>/NewMDCLUSTER_XXXX/}
@@ -339,17 +345,20 @@
 \begin{frame}
   \begin{center}
     {\Huge The results} \\
-
     \bigskip
-
-    ~~\\
-  % The paper will be submitted very soon. \\
-  % \bigskip
-  % The results are \alert{preliminary}.
   \end{center}
+
+  The results are mainly coming from
+  \begin{itemize}
+      \item \hyperref{intropaper}{}{}{the introduction paper (Cui et al. 2018)} is mainly about some general properites and scaling relations.
+      \item \hyperref{Wang}{}{}{the environment paper (Wang et al. 2018)}  mainly talks about the differences between cluster and other environments.
+      \item \hyperref{Mostoghiu}{}{}{the density profile paper (Mostoghiu et al. 2018)} studies the self-similarity of the density profiles in galaxy clusters.
+      \item \hyperref{Arthur}{}{}{The phase-space paper (Arthur et al. to be sumbitted)} investigates the gas phase-space in and around galaxy clusters.
+      \item \hyperref{Li}{}{}{The physical density paper (Li et al. in final prep.)} try to compare and understand the observable profiles in galaxy clusters.
+  \end{itemize}
 \end{frame}
 
-\subsection{General Properties}
+\subsection{General Properties}\label{intropaper}
 \begin{frame}
   \frametitle{General Properties: Baryon effects on halo mass}
   \only<1>{
@@ -392,8 +401,7 @@
             $0.10 - 0.50$		& 0.44 / 0.36 & 0.56 / 0.48 & 0.70 / 0.65\\
             $0.50 - 1.00$		& 0.36 / 0.34 & 0.45 / 0.46 & 0.56 / 0.57\\
             $1.00 - 6.41$ 	& 0.27 / 0.29 & 0.30 / 0.35 & 0.43 / 0.48\\ \hdashline
-            $6.41 - 10$   	& \alert{0.18 / 0.21} & 0.20 / 0.24 & 0.21 / 0.26\\
-            $> 10 $ 		    & 0.06 / 0.08 & 0.07 / 0.13 & 0.07 / 0.14\\
+            $>6.42$   	& \alert{0.15 / 0.17} & 0.16 / 0.21 & 0.17 / 0.23\\
             % \hline
           \end{tabular}
         \end{table}
@@ -418,6 +426,14 @@
   }
 \end{frame}
 
+\begin{frame}{General properties: the concentration}
+  \begin{figure}
+    \includegraphics<1>[width=\linewidth]{C-M-relations}
+    \vspace{-0.6cm}
+    \caption{The concentration -- mass relation. Cui et al. 2018}
+  \end{figure}
+\end{frame}
+
 \begin{frame}
   \frametitle{General Properties: the baryon fractions}
   \begin{figure}
@@ -429,7 +445,16 @@
   \end{figure}
 \end{frame}
 
-\subsection{Scaling relations}
+\begin{frame}
+  \frametitle{General Properties: the halo - central galaxy mass relation}
+  \begin{figure}
+    \includegraphics<1>[width=0.7\linewidth]{HS-relation-full}
+    \vspace{-0.6cm}
+    \caption{The halo mass - central galaxy mass relation. Cui et al. 2018}
+  \end{figure}
+\end{frame}
+
+\subsubsection{Scaling relations}
 \begin{frame}{Stellar-Halo mass relation}
   \begin{figure}
     \includegraphics[width=0.75\linewidth]{HM-SM-relation}
@@ -462,34 +487,26 @@
     \includegraphics[width=0.48\linewidth]{T-M-relations}
     \includegraphics[width=0.48\linewidth]{YM_relation}
     \vspace{-0.4cm}
-    \caption{The gas relations.  }
+    \caption{The gas scaling relations.}
   \end{figure}
+
+\begin{center}
+  Fitting function -- $Y_{500} = 10^A (\frac{M_{500}}{6\times10^{14} M_{\odot}})^B$
+\end{center}
 \end{frame}
 
-\begin{frame}{The cluster density profiles: Mostoghiu et al. in prep.}
-  \begin{columns}[t]
-    \begin{column}{0.3\textwidth}
-      \begin{figure}
-        \includegraphics[width=\linewidth]{LeBrun18}
-        \caption{Density profiles. Le Brun et al. 2018}
-      \end{figure}
-    \end{column}
-    \begin{column}{0.7\textwidth}
-      \only<1>{
-      \begin{figure}
-        \includegraphics[width=\linewidth]{Robert-density}
-        \caption{Density profiles from the mass-complete sample. credit: Robert Mostoghiu}
-      \end{figure}}
-      \only<2>{
-      \begin{figure}
-        \includegraphics[width=\linewidth]{Robert-formationtime}
-        \caption{Formation time. credit: Robert Mostoghiu}
-      \end{figure}}
-    \end{column}
-  \end{columns}
+\begin{frame}{Conclusion 1}
+  {
+  \begin{itemize}
+    \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
+    \item $\sim 20 \%$ of the complete sample is relaxed clusters, 26\% (9\%) of the sample is CC for GadgetX (MUSIC).
+    \item Compare with observations (Agreement): The baryon fractions for cluster mass range, optical relations and gas scaling relations are generally in agreement with the observations.
+    \item Compare with observations (Disagreement):  stellar-halo mass relation (A problem of ICL), galaxy color in clusters seems a little blue.
+  \end{itemize}}
 \end{frame}
 
-\begin{frame}{The environmental effects: Wang et al. in prep.}
+\subsection{The environment effects}\label{Wang}
+\begin{frame}{The environmental effects: Wang et al. 2018}
   \only<1>{
   \begin{center}
         \begin{tikzpicture}
@@ -513,20 +530,66 @@
   \end{figure}
   }
 \end{frame}
-
-\section{conclusion and future prospects}
-\begin{frame}
-  \frametitle{Conclusion}
+\begin{frame}{Conclusion 2}
   {
   \begin{itemize}
-    \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
-    \item $\sim 20 \%$ of the complete sample is relaxed clusters, 26\% (9\%) of the sample is CC for GadgetX (MUSIC).
-    \item Compare with observations (Agreement): The baryon fractions for cluster mass range, optical relations and gas scaling relations are generally in agreement with the observations.
-    \item Compare with observations (Disagreement):  stellar-halo mass relation (A problem of ICL), galaxy color in clusters seems a little blue.
-    \item Relaxed clusters show a weak redshift evolution of the density profile, which is due to their earlier formation time.
     \item There is a weak environmental effects.
   \end{itemize}}
 \end{frame}
+
+\subsection{The density profiles}\label{Mostoghiu}
+\begin{frame}{The cluster density profiles: Mostoghiu et al. 2018.}
+  \begin{columns}[t]
+    \begin{column}{0.3\textwidth}
+      \begin{figure}
+        \includegraphics[width=\linewidth]{LeBrun18}
+        \caption{Density profiles. Le Brun et al. 2018}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.7\textwidth}
+      \only<1>{
+      \begin{figure}
+        \includegraphics[width=\linewidth]{Robert-density}
+        \caption{Density profiles from the mass-complete sample. credit: Robert Mostoghiu}
+      \end{figure}}
+      \only<2>{
+      \begin{figure}
+        \includegraphics[width=\linewidth]{Robert-formationtime}
+        \caption{Formation time. credit: Robert Mostoghiu}
+      \end{figure}}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}{Conclusion 3}
+  {
+  \begin{itemize}
+    \item Relaxed clusters show a weak redshift evolution of the density profile, which is due to their earlier formation time.
+  \end{itemize}}
+\end{frame}
+
+\subsection{The gas phase-space distribution}\label{Arthur}
+\begin{frame}{The gas phase-sapce distribution}
+
+\end{frame}
+\begin{frame}{Conclusion 4}
+  {
+  \begin{itemize}
+    \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
+  \end{itemize}}
+\end{frame}
+
+\subsection{The observable profiles}\label{Li}
+\begin{frame}{The observable profiles}
+
+\end{frame}
+\begin{frame}{Conclusion 5}
+  {
+  \begin{itemize}
+    \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
+  \end{itemize}}
+\end{frame}
+
+\section{future prospects}
 
 \begin{frame}
   \frametitle{Future works}
