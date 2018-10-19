@@ -49,7 +49,7 @@
   Departamento de F\'isica Te\'{o}rica, \\
   Universidad Aut\'{o}noma de Madrid, 28049 Madrid, Spain
 }
-\date[]{Purple mountain Observatory, Nanjing, 19, Oct. 2018 \\
+\date[]{Purple Mountain Observatory, Nanjing, 19, Oct. 2018 \\
 Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.2898C}{}{}{Cui et al. 2018, MNRAS, 480, 2898}, \hyperref{http://adsabs.harvard.edu/abs/2018arXiv180905244W}{}{}{Wang et al. 2018}, Mostoghiu et al. 2018, Arthur et al. to be submitted and Li et al. in prep.}
 \logo{\includegraphics[height=1cm]{logo_uam.jpg}}
 
@@ -76,6 +76,15 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
     \end{textblock*}
     \begin{textblock*}{0.5cm}(9.5cm,3.2cm) %(11.9cm,3.5cm) % {block width} (coords)
       \includegraphics[width=0.5cm]{Dave}
+    \end{textblock*}
+    \begin{textblock*}{0.3cm}(11cm,3.2cm) 
+      \includegraphics[width=0.3cm]{pascalElahi.jpeg}
+    \end{textblock*}
+    \begin{textblock*}{0.3cm}(8.5cm,3.2cm) 
+      \includegraphics[width=0.3cm]{wangyang.jpg}
+    \end{textblock*}
+    \begin{textblock*}{0.3cm}(5.6cm,3.1cm) 
+      \includegraphics[width=0.3cm]{JakeArthur.png}
     \end{textblock*}
     \caption{Join Us!}
   \end{figure}
@@ -113,7 +122,14 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
   {\bf To understand these observational results, especially how they are formed, we need simulations.}
 
   \begin{center}
-    \movie[loop,autostart]{\includegraphics[width=0.6\textwidth]{G3X-17-image.pdf}}{plots/NewMDCLUSTER_0017.mp4}
+  \includemedia[width=0.6\linewidth,height=0.6\linewidth,activate=pageopen,
+passcontext,
+transparent,
+addresource=plots/NewMDCLUSTER0017.mp4,
+flashvars={source=plots/NewMDCLUSTER0017.mp4}
+]{\includegraphics[width=0.6\linewidth]{G3X-17-image.pdf}}{VPlayer.swf}
+
+    % \movie[loop,autostart]{\includegraphics[width=0.6\textwidth]{G3X-17-image.pdf}}{plots/NewMDCLUSTER0017.mp4}
   \end{center}
 
   % This require Adobe PDF viewer, evince not working!
@@ -494,13 +510,12 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
 \end{frame}
 
 \begin{frame}{Conclusion 1}
-  {
   \begin{itemize}
     \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
     \item $\sim 20 \%$ of the complete sample is relaxed clusters, 26\% (9\%) of the sample is CC for GadgetX (MUSIC).
     \item Compare with observations (Agreement): The baryon fractions for cluster mass range, optical relations and gas scaling relations are generally in agreement with the observations.
     \item Compare with observations (Disagreement):  stellar-halo mass relation (A problem of ICL), galaxy color in clusters seems a little blue.
-  \end{itemize}}
+  \end{itemize}
   \begin{center}
     \hyperlink{lastpage}{\beamerbutton{jump to the last slide}}    
   \end{center}
@@ -538,15 +553,13 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
     \end{center}
     \begin{textblock}{0.25}(0.02,0.2)
       {\scriptsize Three environments: cluster ($<2*R_{200}$); vicinity ($2*R_{200} - 10\Mpc$ and Void ($<38 \Mpc$).}
-    \end{textblock}
-  }
+    \end{textblock}  }
   \only<2>{
   \begin{figure}
     \includegraphics[width=0.6\linewidth]{Yang-color}
     \vspace{-0.4cm}
     \caption{color--environment relation. credit: Wang et al. 2018}
-  \end{figure}
-  }
+  \end{figure}  }
   \only<3>{
     \begin{figure}
     \includegraphics[width=0.6\linewidth]{Yang-sSFR}
@@ -558,8 +571,7 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
     \includegraphics[width=0.4\linewidth]{Yang-SFR}
     \vspace{-0.6cm}
     \caption{SFR -- environment relation. credit: Wang et al. 2018}
-  \end{figure}
-  }
+  \end{figure}  }
 \end{frame}
 \begin{frame}{Conclusion 2}
   \begin{itemize}
@@ -579,7 +591,7 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
   \end{center}
   
   \begin{itemize}
-      \item     \hyperlink{intropaper}{\beamerbutton{the introduction paper}} (Cui et al. 2018) is mainly about some general properites and scaling relations.
+      \item \hyperlink{intropaper}{\beamerbutton{the introduction paper}} (Cui et al. 2018) is mainly about some general properites and scaling relations.
       \item \hyperlink{Wang}{\beamerbutton{the environment paper}} (Wang et al. 2018)  mainly talks about the differences between cluster and other environments.
       \item \hyperlink{Mostoghiu}{\beamerbutton{\alert{the density profile paper}}} (Mostoghiu et al. 2018) studies the self-similarity of the density profiles in galaxy clusters.
       \item \hyperlink{Arthur}{\beamerbutton{The phase-space paper}} (Arthur et al. to be submitted) investigates the gas phase-space in and around galaxy clusters.
@@ -589,31 +601,45 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
 
 \subsection{The density profiles}\label{Mostoghiu}
 \begin{frame}{The cluster density profiles: Mostoghiu et al. 2018.}
-  \begin{columns}[t]
-    \begin{column}{0.3\textwidth}
-      \begin{figure}
-        \includegraphics[width=\linewidth]{LeBrun18}
-        \caption{Density profiles. Le Brun et al. 2018}
-      \end{figure}
-    \end{column}
-    \begin{column}{0.7\textwidth}
-      \only<1>{
-      \begin{figure}
-        \includegraphics[width=\linewidth]{Robert-density}
-        \caption{Density profiles from the mass-complete sample. credit: Robert Mostoghiu}
-      \end{figure}}
-      \only<2>{
-      \begin{figure}
-        \includegraphics[width=\linewidth]{Robert-formationtime}
-        \caption{Formation time. credit: Robert Mostoghiu}
-      \end{figure}}
-    \end{column}
-  \end{columns}
+  \only<1>{
+  The motivation:
+  \vspace{-0.5cm}
+  \begin{figure}
+    \includegraphics[width=0.5\linewidth]{LeBrun18}
+    \vspace{-0.5cm}
+  \end{figure}
+    \begin{textblock}{0.3}(0.01,0.4)
+      {Density profiles. Le Brun et al. 2018}
+    \end{textblock}
+  }
+  \only<2>{
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Mostoghiu-density-relax.png}
+    \caption{Galaxy cluster density profiles sepearated into relax and unrelax sample. Mostoghiu et al. 2018}
+  \end{figure}}
+  \only<3>{
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Mostoghiu-formation-time.png}
+    \caption{Formation time of relaxed and unrelaxed galaxies. Mostoghiu et al. 2018}
+  \end{figure} }
+    \only<4>{
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Mostoghiu-density-foramtiontime.png}
+    \caption{Galaxy cluster density profiles sepearated by formation time. Mostoghiu et al. 2018}
+  \end{figure}}
+    \only<5>{
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Mostoghiu-density-gas.png}
+    \caption{Gas density profiles. Mostoghiu et al. 2018}
+  \end{figure}}
 \end{frame}
 \begin{frame}{Conclusion 3}
  
   \begin{itemize}
-    \item Relaxed clusters show a weak redshift evolution of the density profile, which is due to their earlier formation time.
+    \item Agree with LeBrun et al 2018, the density profile shows self-similarity upto z = 2.5.
+    \item However, separating the relax clusters from the un-relax ones, we found the density peaks from the relax clusters show redshift evoution.
+    \item This redshift evolution of the density peak, is due to their earlier formation time.
+    \item The gas density profiles agree with the total density profiles beside the redshift z=2.5, which could due to mergers and/or star formation.
   \end{itemize}
     \begin{center}
     \hyperlink{lastpage}{\beamerbutton{jump to the last slide}}    
@@ -627,21 +653,60 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
   \end{center}
 
   \begin{itemize}
-      \item     \hyperlink{intropaper}{\beamerbutton{the introduction paper}} (Cui et al. 2018) is mainly about some general properites and scaling relations.
+      \item \hyperlink{intropaper}{\beamerbutton{the introduction paper}} (Cui et al. 2018) is mainly about some general properites and scaling relations.
       \item \hyperlink{Wang}{\beamerbutton{the environment paper}} (Wang et al. 2018)  mainly talks about the differences between cluster and other environments.
       \item \hyperlink{Mostoghiu}{\beamerbutton{the density profile paper}} (Mostoghiu et al. 2018) studies the self-similarity of the density profiles in galaxy clusters.
-      \item \hyperlink{Arthur}{\beamerbutton{\alert{The phase-space paper}}} (Arthur et al. to be sumbitted) investigates the gas phase-space in and around galaxy clusters.
+      \item \hyperlink{Arthur}{\beamerbutton{\alert{The phase-space paper}}} (Arthur et al. to be sumbitted) investigates the phase-space in and around galaxy clusters.
       \item \hyperlink{Li}{\beamerbutton{The physical density paper}} (Li et al. in final prep.) try to compare and understand the observable profiles in galaxy clusters.
   \end{itemize}
 \end{frame}
 
-\subsection{The gas phase-space distribution}\label{Arthur}
-\begin{frame}{The gas phase-sapce distribution}
+\subsection{The phase-space distribution}\label{Arthur}
+\begin{frame}{The phase-sapce distribution, Arthur et al. 2018}
+The motivation: 
 
+Recent studies have already shown that galaxies are significantly altered from their initial state by group and filament environments, before even reaching the galaxy cluster; a phenomenon known as \alert{pre-processing}. This pre-processing is very important to understand how gas enters halos and the role of \alert{ram presure striping}.
+
+The \alert{phase-sprespace} plane can be used to infer information about the assembly history of a particular cluster and the orbital histories of each galaxy around it, shedding more light on the link between environment and galaxy properties. 
+
+We want to understand how the instantaneous ram pressure is correlated with phase-space position, and how this may be linked to halo gas content.
 \end{frame}
+\begin{frame}{The phase-sapce distribution}
+  \only<1>{
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Arthur-calculation-explaination.png}
+    \caption{The phase-sapce distribution example. Stacking...}
+  \end{figure}}
+  \only<2>{
+  \begin{figure}
+    \includegraphics[width=0.58\linewidth]{Arthur-phase-space.png}\vspace{-0.4cm}
+    \caption{The phase-sapce distributions.}
+  \end{figure}}
+    \only<3>{
+  \begin{figure}
+    \includegraphics[width=\linewidth]{Arthur-phase-space-halo-subhalo.png}\vspace{-0.6cm}
+    \caption{The phase-sapce distribution separated by halo and subhalo.}
+  \end{figure}}
+      \only<4>{
+  \begin{figure}
+    \includegraphics[width=0.7\linewidth]{Arthur-ram-presure.png}\vspace{-0.6cm}
+    \caption{The ram pressure phase distribution.}
+  \end{figure}}
+      \only<5>{
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{Arthur-ram-halo-subhalo.png}
+  \end{figure}
+  \begin{textblock}{0.12}(0.01,0.2)
+    The ram pressure phase distribution separated by halo and subhalo.
+  \end{textblock}}
+\end{frame}
+
 \begin{frame}{Conclusion 4}
   \begin{itemize}
-    \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
+    \item There is a distinct cut off in gas content of haloes at $\sim$ 1.5 $R_vir$. Objects within this region are definitively gas-poor, as opposed to objects outside this region which have considerably more gas. This sharp cut off in gas content could indicate the presence of an accretion shock at $\sim$ 1.5 $R_vir$.
+    \item There is a significant amount of contamination in the LOS projection, particularly around the cluster virial radius.
+    \item Subhaloes are considerably more gas-poor than haloes.
+    \item There are distinct regions on the phase-space plane where haloes experience greater instantaneous ram pressure as they infall.
   \end{itemize}
     \begin{center}
     \hyperlink{lastpage}{\beamerbutton{jump to the last slide}}    
@@ -658,20 +723,39 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
       \item     \hyperlink{intropaper}{\beamerbutton{the introduction paper}} (Cui et al. 2018) is mainly about some general properites and scaling relations.
       \item \hyperlink{Wang}{\beamerbutton{the environment paper}} (Wang et al. 2018)  mainly talks about the differences between cluster and other environments.
       \item \hyperlink{Mostoghiu}{\beamerbutton{the density profile paper}} (Mostoghiu et al. 2018) studies the self-similarity of the density profiles in galaxy clusters.
-      \item \hyperlink{Arthur}{\beamerbutton{The phase-space paper}} (Arthur et al. to be sumbitted) investigates the gas phase-space in and around galaxy clusters.
+      \item \hyperlink{Arthur}{\beamerbutton{The phase-space paper}} (Arthur et al. to be sumbitted) investigates the phase-space in and around galaxy clusters.
       \item \hyperlink{Li}{\beamerbutton{\alert{The physical density paper}}} (Li et al. in final prep.) try to compare and understand the observable profiles in galaxy clusters.
   \end{itemize}
 \end{frame}
 
 \subsection{The observable profiles}\label{Li}
 \begin{frame}{The observable profiles}
-
+  \only<1>{
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{Li-age-profile.png}\vspace{-0.5cm}
+    \caption{The stellar age profile.}
+  \end{figure}}
+\only<2>{
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{Li-Starmetal-profiel.png}\vspace{-0.5cm}
+\caption{The stellar metal profile.}
+\end{figure}}
+  \only<3>{
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{Li-temperature-profile.png}\vspace{-0.5cm}
+    \caption{The gas temperature profile.}
+  \end{figure}}
+    \only<4>{
+  \begin{figure}
+    \includegraphics[width=0.8\linewidth]{Li-gasmetal-profile.png}\vspace{-0.5cm}
+    \caption{The gas metallicity profile.}
+  \end{figure}}
 \end{frame}
+
 \begin{frame}{Conclusion 5}
-  {
-  \begin{itemize}
-    \item The baryons have a negligible impact on the halo mass for both $M_{200}$ and $M_{500}$.
-  \end{itemize}}
+    \begin{center}
+        {\Large Stay tuning...}
+    \end{center}
 \end{frame}
 
 \section{future prospects}\label{lastpage}
@@ -684,12 +768,17 @@ Main results come from \hyperref{http://adsabs.harvard.edu/abs/2018MNRAS.480.289
       \caption{Tasks from GlenFindding workshop.}
     \end{figure}}
     \item<2|only@2>[]{
+    \begin{figure}
+      \includegraphics[width=0.5\linewidth]{Music-17-image.pdf}
+      \includegraphics[width=0.5\linewidth]{G3X-17-image.pdf}
+      \caption{Mock observations.}
+    \end{figure}}
+    \item<3|only@3>[]{
       \begin{figure}
         \includegraphics[width=\linewidth]{The300}
         \caption{Be one of us!}
       \end{figure}
       Contact me \alert{cuiweiguang@gmail.com}, Alexander \alert{alexander.knebe@uam.es} or Gustavo \alert{gustavo.yepes@uam.es}}
   \end{itemize}
-
 \end{frame}
 \end{document}
